@@ -12,6 +12,7 @@ class HornedBeast extends React.Component {
     super(props);
     this.state = {
       numberOfPets: 0,
+      
     }
   }
 
@@ -22,12 +23,19 @@ class HornedBeast extends React.Component {
   }
 
 
+
+changeInfo = () =>{
+  this.props.info();
+
+
+
+  }
   render() {
 
     return (
 
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top"  src={this.props.imgUrl} alt={this.props.title} />
+      <Card style={{ width: '18rem' }}  >
+        <Card.Img variant="top"  src={this.props.imgUrl} alt={this.props.title} onClick={this.changeInfo} />
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
