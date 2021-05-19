@@ -3,8 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button';
 
-
-
 class HornedBeast extends React.Component {
     constructor(props) {
         super(props);
@@ -29,7 +27,7 @@ class HornedBeast extends React.Component {
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>{this.props.descreption}</Card.Text>
-                    <Card.Text>number votes: {this.state. numberOfvoets}</Card.Text>
+                    <Card.Text>number votes:{this.state. numberOfvoets}</Card.Text>
                     <Button onClick={this.increaseNumberofVote} variant="primary"> Vote  </Button>
                 </Card.Body>
                 </Card>

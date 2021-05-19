@@ -22,8 +22,8 @@ constructor(props){
     this.setState({
       show: true,
     })
-  
   }
+  
   handleClose = () => {
     this.setState({
       show: false,
@@ -31,7 +31,7 @@ constructor(props){
   }
 
 getMyArr=(title)=>{
-const  myarr= Data.find(val=>{
+let myarr= Data.find(val=>{
 
   if (val.title === title) {
     return val;

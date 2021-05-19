@@ -17,7 +17,7 @@ class Main extends React.Component {
                 title={item.title}
                 imageUrl={item.image_url}
                 descreption={item.description}
-                 getMyArr={this.props.getMyArr}
+                getMyArr={this.props.getMyArr}
                 key={index}
              
               />
