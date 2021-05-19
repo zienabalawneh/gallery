@@ -1,60 +1,38 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-
-
+import {CardColumns} from 'react-bootstrap'
 
 
 class Main extends React.Component {
 
 
-
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      dif: 'hi',
-    }
-  }
-
-  info = () => {
-    this.setState({
-      dif: 'aaa'
-    
-    })
-
-
-  }
-
   render() {
     return (
-      <>
-        {this.props.beastArr.map((item, i) => {
-          return (
+      <CardColumns>
+        <div className='new'>
 
-            <HornedBeast 
-              title={item.title}
-              imgUrl={item.image_url}
-              description={item.description}
-              key={i}
-            />
-          )
-        })}
+          {this.props.Data.map((item, index) => {
+            return (
+              <HornedBeast
+                title={item.title}
+                imageUrl={item.image_url}
+                descreption={item.description}
+                 getMyArr={this.props.getMyArr}
+                key={index}
+             
+              />
 
-        <h1>{this.state.dif} </h1>
-        
-      </>
+            )
+          })
+          }
 
 
 
+        </div>
+      </CardColumns>
     )
-
   }
-
-
-
 }
-
-
 export default Main;
 
 
