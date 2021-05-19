@@ -13,7 +13,7 @@ constructor(props){
  
   show:false,
   myarr:{},
- Data:Data
+  Data:Data
   }
 }
 
@@ -47,13 +47,15 @@ this.setState({
 }
 
 
+
+
 render(){
 
 
 return(
   <>
   <Header/>
-  <Main Data ={this.state.Data}  handleShow={this.handleShow} getMyArr={this.getMyArr}   />
+  <Main Data={this.state.Data}  handleShow={this.handleShow}            getMyArr={this.getMyArr}   />
   <SelectedBeast  handleClose={this.handleClose}  show={this.state.show}   myarr={this.state.myarr}           />
   <Footer/>
   </>
